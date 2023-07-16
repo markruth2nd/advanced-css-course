@@ -1,0 +1,18 @@
+
+*,
+a::after,
+a::before{
+    margin: 0;
+    padding: 0;
+    /* color: rgb(2, 91, 163); */
+    box-sizing: inherit;/* Inherts from body */
+}
+
+html{
+    /* This defines what 1rem is;] */
+    font-size: 62.5%;
+}
+
+body{ 
+    box-sizing: border-box;
+}
