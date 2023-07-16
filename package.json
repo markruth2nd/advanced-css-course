@@ -1,0 +1,22 @@
+{
+  "name": "advanced-css-course",
+  "version": "1.0.0",
+  "description": "Landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass Natours/starter/sass/main.css Natours/starter/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markruth2nd/advanced-css-course.git"
+  },
+  "author": "mark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markruth2nd/advanced-css-course/issues"
+  },
+  "homepage": "https://github.com/markruth2nd/advanced-css-course#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
