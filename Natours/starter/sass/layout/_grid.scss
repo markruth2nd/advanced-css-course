@@ -1,6 +1,53 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
+    background-color: #888383;
     margin: 0 auto;
-    margin-bottom: $gutter-vertical;
+
+    //The below will be applied to all children of the .row class except the last child
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include clearfix;
+
+    [class^="col-"] {
+        background-color: #f7f7f7;
+        float: left;
+
+        //The below will be applied to all children of the .col-1of-2 class except the last child
+        &:not(:last-child) {
+                margin-right: $gutter-horizontal;
+    }
+
+    .col-1-of-2 {
+        //The below will calculate the width of the column based on the grid width and the horizontal gutter deducted from the grid width
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+        
+        }
+    }
+
+    .col-1-of-3 {
+        //The below will calculate the width of the column based on the grid width and the horizontal gutter deducted from the grid width
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    }
+
+    .col-2-of-3 {
+        //The below will calculate the width of the column based on the grid width and the horizontal gutter deducted from the grid width
+        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+    }
+
+    .col-1-of-4 {
+        //The below will calculate the width of the column based on the grid width and the horizontal gutter deducted from the grid width
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+    }
+
+    .col-2-of-4 {
+        //The below will calculate the width of the column based on the grid width and the horizontal gutter deducted from the grid width
+        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+    }
+
+    .col-3-of-4 {
+        //The below will calculate the width of the column based on the grid width and the horizontal gutter deducted from the grid width
+        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+    }
 }
