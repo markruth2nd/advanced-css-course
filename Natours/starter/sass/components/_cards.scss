@@ -28,6 +28,12 @@
             &-1 {
                 background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(../img/nat-10.jpg);
             }
+            &-2 {
+                background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .8)), url(../img/nat-10.jpg);
+            }
+            &-3 {
+                background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, .8)), url(../img/nat-10.jpg);
+            }
         }
     }
 
@@ -49,17 +55,19 @@
         background-blend-mode: soft-light;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        /* border-top-left-radius: 3px;
+        border-top-right-radius: 3px; */
 
         &--1 {
             background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(../img/nat-5.jpg);
         }
 
         &--2 {
-            background-image: url(../img/nat-5.jpg)
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .8)), url(../img/nat-6.jpg);
         }
 
         &--3 {
-            background-image: url(../img/nat-5.jpg)
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, .8)), url(../img/nat-7.jpg);
         }
     }
 
@@ -83,6 +91,12 @@
         &--1 {
             background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8));
         }
+        &--2 {
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .8));
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, .8));
+        }
     }
 
     &__details {
@@ -103,5 +117,41 @@
                 }
             }
         }
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8));
+        }
+        /* &--2 {
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .8));
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, .8));
+        } */
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
     }
  }
