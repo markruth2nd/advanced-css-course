@@ -511,7 +511,8 @@ body {
     display: table;
     overflow: hidden;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5); }
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all .4s .2s; }
   .popup__left {
     width: 33.33333%;
     display: table-cell; }
@@ -525,7 +526,7 @@ body {
     width: 100%; }
   .popup__text {
     font-size: 1.4rem;
-    /* color: $color-grey-dark-2; */
+    color: #999;
     margin-bottom: 4rem;
     -moz-column-count: 2;
     -moz-column-gap: 4rem;

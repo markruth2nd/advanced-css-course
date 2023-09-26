@@ -23,7 +23,8 @@
         display: table;
         overflow: hidden;
         opacity: 0;
-        transform: translate(-50%, -50%) scale(.5);
+        transform: translate(-50%, -50%) scale(.25);
+        transition: all .4s .2s;
 
     }
 
@@ -47,7 +48,7 @@
 
     &__text {
         font-size: 1.4rem;
-        /* color: $color-grey-dark-2; */
+        color: $color-grey-dark-2;
         margin-bottom: 4rem;
 
         -moz-column-count: 2;
