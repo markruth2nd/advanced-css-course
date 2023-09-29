@@ -10,6 +10,21 @@ Medium blue: rgb(28, 118, 193)
 Dark blue: rgb(2, 91, 163)
 
 */
+/* 
+
+0 - 600PX - PHONE
+600PX - 900PX - TABLET PORTRAIT
+900PX - 1200PX - TABLET LANDSCAPE
+1200PX - 1800PX - NORMAL DESKTOP (where normal style apply)
+
+1800PX + - BIG DESKTOP
+ 
+breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ */
 *,
 a::after,
 a::before {
@@ -21,7 +36,24 @@ a::before {
 
 html {
   /* This defines what 1rem is;] */
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  /* 10px/16px = 62.5% -> 1rem = 10px */
+  /* @include respond(phone) {
+        font-size: 50%; - (NOT REQUIRED AS TABLET BELOW IS THE SAME)
+    } */
+  /*  900 / 16 = 56.25 */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%;
+      /* 1rem = 9px */ } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%;
+      /* 1rem = 8px, 8/16 = 50% */ } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%;
+      /* 1rem = 12, 12/18 = 75% */ } }
 
 body {
   box-sizing: border-box; }
