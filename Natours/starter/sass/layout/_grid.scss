@@ -6,7 +6,18 @@
     //The below will be applied to all children of the .row class except the last child
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include respond(tab-port) {
+                // width < 900px?
+                margin-bottom: $gutter-vertical-small;
+        }
     }
+
+        @include respond(tab-port) {
+            // width < 900px?
+            max-width: 50rem;
+            padding: 0 2rem;
+        }
 
     @include clearfix;
 
@@ -16,7 +27,20 @@
         //The below will be applied to all children of the .col-1of-2 class except the last child
         &:not(:last-child) {
                 margin-right: $gutter-horizontal;
-    }
+
+                @include respond(tab-port) {
+                        // width < 900px?
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(tab-port) {
+            // width < 900px?
+            width: 100% !important;
+        }
+
+
     }
 
     .col-1-of-2 {
