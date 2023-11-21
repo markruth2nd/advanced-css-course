@@ -45,9 +45,9 @@ ORDER: Base + Typography -> General Layout -> Page Layout -> Components
         @media (max-width: 56.25em) { @content }; /*  900 / 16 = 56.25 */
     }
     @if $breakpoint == tab-land {
-        @media (max-width: 75em) { @content };
+        @media (max-width: 75em) { @content }; /*  1200 / 16 = 75 */
     }
     @if $breakpoint == big-desktop {
-        @media (min-width: 112.5em) { @content };
+        @media (min-width: 112.5em) { @content }; /*  1800 / 16 = 112.5 */
     }
 }
